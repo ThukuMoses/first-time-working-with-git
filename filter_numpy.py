@@ -38,3 +38,5 @@ fil_cos=cosmos>50#change here to cosmos%2==0 to get a directly filtered by even 
 new_fcos=cosmos[fil_cos]
 print(f"Directly filtered boolean array: \n{fil_cos}")
 print(f"Directly filtered array:\n{new_fcos}")
+
+print("I am the Space array Master named Everblue Space and I live in Mars.")
