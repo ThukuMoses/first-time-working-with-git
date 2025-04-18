@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibe coding</title>
+  <style>
+    body {
+      background-image: url(https://t3.ftcdn.net/jpg/10/42/68/86/360_F_1042688648_NiCEnaBk3WCCwGSwdvIBkK2jdZGtZqYm.jpg);
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      
+      
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      color: darkviolet;
+      background-color: greenyellow;
+    }
+    /* The "No" button will be absolutely positioned so we can move it around */
+    #no {
+      position: absolute;
+    }
+    h1{
+        color: rgb(203, 12, 228);
+        background-color: chartreuse;
+        font-family: 'Times New Roman', Times, serif;
+        font-size:xx-large;
+        font-weight: 1000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Are you a vibe coder?</h1>
+  <button id="yes" onclick="alert('Make sure you understand what the AI is doing or you\'ll have to debug for eternity')">Yes</button>
+  <button id="no" onmouseover="moveButton()">No</button>
+
+  <script>
+    function moveButton() {
+      var btn = document.getElementById('no');
+      // Get the dimensions of the viewport
+      var viewportWidth = window.innerWidth;
+      var viewportHeight = window.innerHeight;
+      // Get the dimensions of the button
+      var btnWidth = btn.offsetWidth;
+      var btnHeight = btn.offsetHeight;
+      
+      // Calculate random positions within the viewport, keeping the button fully visible
+      var newX = Math.floor(Math.random() * (viewportWidth - btnWidth));
+      var newY = Math.floor(Math.random() * (viewportHeight - btnHeight));
+      
+      // Set the new position of the "No" button
+      btn.style.left = newX + 'px';
+      btn.style.top = newY + 'px';
+    }
+  </script>
+</body>
+</html>
+
+
+
